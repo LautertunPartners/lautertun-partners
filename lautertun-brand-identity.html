@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lautertun Partners — Brand Identity</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink:       #1A2535;
+    --deep:      #243447;
+    --mid:       #3A5472;
+    --gold:      #B8934A;
+    --gold-lt:   #D4AC6E;
+    --amber:     #E8C97A;
+    --sage:      #4A7868;
+    --sage-lt:   #6A9E8E;
+    --parchment: #F6F2EB;
+    --cream:     #FAF8F4;
+    --white:     #FFFFFF;
+    --rule:      rgba(26,37,53,0.10);
+
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body:    'DM Sans', sans-serif;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── SECTIONS ─────────────────────────────────── */
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 48px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .section:last-child { border-bottom: none; }
+
+  .label {
+    font-family: var(--font-body);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: block;
+  }
+
+  h1 { font-family: var(--font-display); font-size: 52px; font-weight: 300; letter-spacing: -.01em; line-height: 1.1; }
+  h2 { font-family: var(--font-display); font-size: 36px; font-weight: 300; line-height: 1.2; }
+  h3 { font-family: var(--font-display); font-size: 22px; font-weight: 400; }
+  p  { font-size: 14px; line-height: 1.8; color: var(--mid); max-width: 620px; }
+
+  /* ── HERO ─────────────────────────────────────── */
+  .hero {
+    background: var(--ink);
+    padding: 0;
+    max-width: 100%;
+    border-bottom: none;
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 48px 72px;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+  }
+  .hero-text .label { color: var(--amber); }
+  .hero-text h1 { color: var(--white); margin-bottom: 16px; }
+  .hero-text p  { color: rgba(255,255,255,.55); max-width: 480px; }
+
+  /* ── LOGO SVG ─────────────────────────────────── */
+  .logo-showcase {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+  }
+  .logo-row {
+    display: flex;
+    align-items: center;
+    gap: 48px;
+    flex-wrap: wrap;
+  }
+  .logo-variant {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .logo-variant .caption {
+    font-size: 10px;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+  .logo-bg-dark  { background: var(--ink);      padding: 32px 40px; border-radius: 4px; }
+  .logo-bg-light { background: var(--parchment); padding: 32px 40px; border-radius: 4px; border: 1px solid var(--rule); }
+  .logo-bg-white { background: var(--white);     padding: 32px 40px; border-radius: 4px; border: 1px solid var(--rule); }
+  .logo-bg-gold  { background: var(--gold);      padding: 32px 40px; border-radius: 4px; }
+
+  /* ── COLOR PALETTE ────────────────────────────── */
+  .palette-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 16px;
+    margin-top: 8px;
+  }
+  .swatch {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .swatch-block {
+    height: 80px;
+    border-radius: 4px;
+    border: 1px solid rgba(0,0,0,.06);
+  }
+  .swatch-name  { font-weight: 500; font-size: 12px; }
+  .swatch-hex   { font-size: 11px; color: var(--mid); letter-spacing: .05em; }
+  .swatch-use   { font-size: 10px; color: var(--mid); line-height: 1.5; }
+
+  /* ── TYPOGRAPHY ───────────────────────────────── */
+  .type-sample { margin-bottom: 40px; }
+  .type-meta   { font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+  .spec-row    { display: flex; gap: 12px; align-items: baseline; margin-top: 6px; }
+  .spec        { font-size: 10px; background: var(--parchment); border: 1px solid var(--rule); padding: 2px 8px; border-radius: 2px; color: var(--mid); }
+
+  /* ── BRAND MARK BREAKDOWN ─────────────────────── */
+  .mark-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+  .annotation {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+  .annotation-item {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+  }
+  .anno-dot {
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: var(--gold);
+    margin-top: 5px;
+    flex-shrink: 0;
+  }
+  .anno-text h4 { font-size: 13px; font-weight: 500; margin-bottom: 3px; }
+  .anno-text p  { font-size: 12px; max-width: none; color: var(--mid); line-height: 1.6; }
+
+  /* ── USAGE / APPLICATIONS ─────────────────────── */
+  .app-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 24px;
+  }
+  .app-card {
+    border-radius: 4px;
+    overflow: hidden;
+    border: 1px solid var(--rule);
+  }
+  .app-card-header {
+    padding: 24px;
+    background: var(--ink);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 120px;
+  }
+  .app-card-body {
+    padding: 16px;
+    background: var(--white);
+  }
+  .app-card-body h4 { font-size: 12px; font-weight: 500; margin-bottom: 4px; }
+  .app-card-body p  { font-size: 11px; color: var(--mid); }
+
+  /* ── DIVIDER ──────────────────────────────────── */
+  .divider {
+    height: 1px;
+    background: var(--rule);
+    margin: 40px 0;
+  }
+
+  /* ── GRID UTILITY ─────────────────────────────── */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+  .three-col { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 32px; }
+
+  /* ── DO / DON'T ───────────────────────────────── */
+  .dont-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .do-card, .dont-card {
+    padding: 24px;
+    border-radius: 4px;
+    border: 1px solid var(--rule);
+  }
+  .do-card   { border-top: 3px solid var(--sage); }
+  .dont-card { border-top: 3px solid #C05B4A; }
+  .do-card h4   { color: var(--sage); font-size: 11px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+  .dont-card h4 { color: #C05B4A;    font-size: 11px; letter-spacing: .1em; text-transform: uppercase; margin-bottom: 8px; }
+  .do-card p, .dont-card p { font-size: 12px; color: var(--mid); max-width: none; }
+
+  /* ── BUSINESS CARD ────────────────────────────── */
+  .biz-card {
+    width: 360px;
+    height: 200px;
+    background: var(--ink);
+    border-radius: 6px;
+    padding: 28px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    overflow: hidden;
+  }
+  .biz-card::before {
+    content: '';
+    position: absolute;
+    bottom: -24px; right: -24px;
+    width: 120px; height: 120px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,147,74,.18);
+  }
+  .biz-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px; right: -10px;
+    width: 80px; height: 80px;
+    border-radius: 50%;
+    border: 1px solid rgba(184,147,74,.10);
+  }
+  .biz-name  { font-family: var(--font-display); font-size: 16px; color: white; font-weight: 300; letter-spacing: .02em; }
+  .biz-title { font-size: 9px; letter-spacing: .14em; text-transform: uppercase; color: var(--amber); margin-top: 3px; }
+  .biz-contact { font-size: 10px; color: rgba(255,255,255,.5); line-height: 1.8; }
+
+  .biz-card-light {
+    background: var(--parchment);
+    border: 1px solid var(--rule);
+  }
+  .biz-card-light .biz-name  { color: var(--ink); }
+  .biz-card-light .biz-title { color: var(--gold); }
+  .biz-card-light .biz-contact { color: var(--mid); }
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+════════════════════════════════════════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div style="flex-shrink:0">
+
+      <!-- PRIMARY LOGO — DARK BACKGROUND -->
+      <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer ring - the lauter tun vessel -->
+        <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.2" fill="none"/>
+        <!-- Inner ring -->
+        <circle cx="32" cy="32" r="24" stroke="#B8934A" stroke-width="0.6" fill="none" opacity="0.4"/>
+
+        <!-- False bottom filter slots - parallel horizontal lines
+             Dense at bottom (grain bed), opening upward (clarification),
+             clipped within the inner circle -->
+        <clipPath id="innerCircle64">
+          <circle cx="32" cy="32" r="23"/>
+        </clipPath>
+        <g clip-path="url(#innerCircle64)">
+          <!-- Bottom dense zone — 5 close lines -->
+          <line x1="9" y1="46" x2="55" y2="46" stroke="#B8934A" stroke-width="1.1" opacity="0.9"/>
+          <line x1="9" y1="42" x2="55" y2="42" stroke="#B8934A" stroke-width="1.0" opacity="0.8"/>
+          <line x1="9" y1="38" x2="55" y2="38" stroke="#B8934A" stroke-width="0.9" opacity="0.7"/>
+          <!-- Middle transitional zone -->
+          <line x1="9" y1="33" x2="55" y2="33" stroke="#B8934A" stroke-width="0.8" opacity="0.6"/>
+          <line x1="9" y1="28" x2="55" y2="28" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/>
+          <!-- Upper open zone — sparse, clear -->
+          <line x1="9" y1="22" x2="55" y2="22" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+          <line x1="9" y1="17" x2="55" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+        </g>
+
+        <!-- Upward emergent arrow/spire — the clarified output rising -->
+        <!-- Clean vertical line with upward flourish suggesting the runoff spigot / rising clarity -->
+        <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="1.5"/>
+        <polyline points="26,20 32,13 38,20" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+
+        <!-- Small horizontal base "false bottom" indicator at center -->
+        <line x1="24" y1="38" x2="40" y2="38" stroke="white" stroke-width="1.5"/>
+        <!-- Legs / spigot stubs -->
+        <line x1="24" y1="38" x2="22" y2="44" stroke="white" stroke-width="1" opacity="0.6"/>
+        <line x1="40" y1="38" x2="42" y2="44" stroke="white" stroke-width="1" opacity="0.6"/>
+      </svg>
+
+    </div>
+    <div class="hero-text">
+      <span class="label">Brand Identity System</span>
+      <h1>Lautertun<br>Partners</h1>
+      <p style="margin-top:14px">Advisory services for lower middle market companies — clarifying complexity, extracting value, restoring strength.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     LOGO MARK CONCEPT
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">The Mark</span>
+  <div class="mark-grid">
+    <div>
+      <h2 style="margin-bottom:24px">A Symbol of<br><em>Clarification</em></h2>
+
+      <!-- LARGE ANNOTATED MARK -->
+      <div style="background:var(--parchment); border:1px solid var(--rule); border-radius:4px; padding:48px; display:inline-flex; align-items:center; justify-content:center;">
+        <svg width="160" height="160" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.2" fill="none"/>
+          <circle cx="32" cy="32" r="24" stroke="#B8934A" stroke-width="0.6" fill="none" opacity="0.4"/>
+          <clipPath id="innerCircle64b">
+            <circle cx="32" cy="32" r="23"/>
+          </clipPath>
+          <g clip-path="url(#innerCircle64b)">
+            <line x1="9" y1="46" x2="55" y2="46" stroke="#B8934A" stroke-width="1.1" opacity="0.9"/>
+            <line x1="9" y1="42" x2="55" y2="42" stroke="#B8934A" stroke-width="1.0" opacity="0.8"/>
+            <line x1="9" y1="38" x2="55" y2="38" stroke="#B8934A" stroke-width="0.9" opacity="0.7"/>
+            <line x1="9" y1="33" x2="55" y2="33" stroke="#B8934A" stroke-width="0.8" opacity="0.6"/>
+            <line x1="9" y1="28" x2="55" y2="28" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/>
+            <line x1="9" y1="22" x2="55" y2="22" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+            <line x1="9" y1="17" x2="55" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+          </g>
+          <line x1="32" y1="38" x2="32" y2="14" stroke="#1A2535" stroke-width="1.5"/>
+          <polyline points="26,20 32,13 38,20" stroke="#1A2535" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+          <line x1="24" y1="38" x2="40" y2="38" stroke="#1A2535" stroke-width="1.5"/>
+          <line x1="24" y1="38" x2="22" y2="44" stroke="#1A2535" stroke-width="1" opacity="0.5"/>
+          <line x1="40" y1="38" x2="42" y2="44" stroke="#1A2535" stroke-width="1" opacity="0.5"/>
+        </svg>
+      </div>
+    </div>
+
+    <div class="annotation" style="padding-top:8px">
+      <h3 style="color:var(--ink); margin-bottom:8px">Concept Breakdown</h3>
+      <p style="margin-bottom:28px; font-size:13px">The mark abstracts the lauter tun's false bottom — the slotted vessel floor that separates valuable wort from spent grain. In business terms, this is the act of restructuring: filtering what's working from what isn't, and letting clarity rise.</p>
+
+      <div class="annotation-item">
+        <div class="anno-dot"></div>
+        <div class="anno-text">
+          <h4>Concentric Rings</h4>
+          <p>The vessel itself. An outer and inner ring echoing the circular lauter tun in cross-section — contained, structural, purposeful.</p>
+        </div>
+      </div>
+      <div class="annotation-item">
+        <div class="anno-dot"></div>
+        <div class="anno-text">
+          <h4>Graduated Filter Lines</h4>
+          <p>Seven horizontal lines that grow sparser toward the top — the false bottom's slots. Dense at base (complexity, debt, pressure), opening upward (clarity, resolution, growth).</p>
+        </div>
+      </div>
+      <div class="annotation-item">
+        <div class="anno-dot"></div>
+        <div class="anno-text">
+          <h4>Rising Vertical with Arrowhead</h4>
+          <p>The clarified wort rising through the vessel — and simultaneously, an upward arrow representing turnaround, the company's trajectory restored.</p>
+        </div>
+      </div>
+      <div class="annotation-item">
+        <div class="anno-dot"></div>
+        <div class="anno-text">
+          <h4>False Bottom Bar</h4>
+          <p>A horizontal base line with small descending stubs references the lauter tun drain spigots — the mechanism of separation and extraction.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     LOGO VARIATIONS
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">Logo System</span>
+  <h2 style="margin-bottom:32px">Lockups & Variations</h2>
+
+  <div class="logo-showcase">
+
+    <!-- PRIMARY HORIZONTAL -->
+    <div>
+      <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:16px;">Primary — Horizontal Lockup</div>
+      <div class="logo-row">
+
+        <div class="logo-variant">
+          <div class="logo-bg-dark">
+            <!-- HORIZONTAL LOCKUP ON DARK -->
+            <svg width="320" height="48" viewBox="0 0 320 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Mark -->
+              <circle cx="24" cy="24" r="22.5" stroke="#B8934A" stroke-width="1"/>
+              <circle cx="24" cy="24" r="18" stroke="#B8934A" stroke-width="0.5" opacity="0.4"/>
+              <clipPath id="mc1">
+                <circle cx="24" cy="24" r="17.5"/>
+              </clipPath>
+              <g clip-path="url(#mc1)">
+                <line x1="6" y1="34.5" x2="42" y2="34.5" stroke="#B8934A" stroke-width="0.9" opacity="0.9"/>
+                <line x1="6" y1="31.5" x2="42" y2="31.5" stroke="#B8934A" stroke-width="0.85" opacity="0.8"/>
+                <line x1="6" y1="28.5" x2="42" y2="28.5" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/>
+                <line x1="6" y1="25" x2="42" y2="25" stroke="#B8934A" stroke-width="0.7" opacity="0.6"/>
+                <line x1="6" y1="21" x2="42" y2="21" stroke="#B8934A" stroke-width="0.65" opacity="0.5"/>
+                <line x1="6" y1="17" x2="42" y2="17" stroke="#B8934A" stroke-width="0.55" opacity="0.4"/>
+                <line x1="6" y1="13" x2="42" y2="13" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+              </g>
+              <line x1="24" y1="28.5" x2="24" y2="11" stroke="white" stroke-width="1.2"/>
+              <polyline points="19.5,15.5 24,10 28.5,15.5" stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+              <line x1="18" y1="28.5" x2="30" y2="28.5" stroke="white" stroke-width="1.2"/>
+              <line x1="18" y1="28.5" x2="16.5" y2="33" stroke="white" stroke-width="0.8" opacity="0.55"/>
+              <line x1="30" y1="28.5" x2="31.5" y2="33" stroke="white" stroke-width="0.8" opacity="0.55"/>
+              <!-- Wordmark -->
+              <text x="60" y="20" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="300" letter-spacing="0.06em" fill="white">LAUTERTUN</text>
+              <text x="60" y="37" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="300" letter-spacing="0.06em" fill="white">PARTNERS</text>
+              <!-- Tagline rule -->
+              <line x1="61" y1="42" x2="252" y2="42" stroke="#B8934A" stroke-width="0.5" opacity="0.5"/>
+              <text x="61" y="47.5" font-family="'DM Sans', sans-serif" font-size="6" fill="#B8934A" letter-spacing="0.18em" opacity="0.9">RESTRUCTURING  ·  ADVISORY  ·  FINANCIAL MANAGEMENT</text>
+            </svg>
+          </div>
+          <span class="caption">Primary — Dark</span>
+        </div>
+
+        <div class="logo-variant">
+          <div class="logo-bg-light">
+            <!-- HORIZONTAL LOCKUP ON LIGHT -->
+            <svg width="320" height="48" viewBox="0 0 320 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="24" r="22.5" stroke="#B8934A" stroke-width="1"/>
+              <circle cx="24" cy="24" r="18" stroke="#B8934A" stroke-width="0.5" opacity="0.4"/>
+              <clipPath id="mc2">
+                <circle cx="24" cy="24" r="17.5"/>
+              </clipPath>
+              <g clip-path="url(#mc2)">
+                <line x1="6" y1="34.5" x2="42" y2="34.5" stroke="#B8934A" stroke-width="0.9" opacity="0.9"/>
+                <line x1="6" y1="31.5" x2="42" y2="31.5" stroke="#B8934A" stroke-width="0.85" opacity="0.8"/>
+                <line x1="6" y1="28.5" x2="42" y2="28.5" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/>
+                <line x1="6" y1="25" x2="42" y2="25" stroke="#B8934A" stroke-width="0.7" opacity="0.6"/>
+                <line x1="6" y1="21" x2="42" y2="21" stroke="#B8934A" stroke-width="0.65" opacity="0.5"/>
+                <line x1="6" y1="17" x2="42" y2="17" stroke="#B8934A" stroke-width="0.55" opacity="0.4"/>
+                <line x1="6" y1="13" x2="42" y2="13" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+              </g>
+              <line x1="24" y1="28.5" x2="24" y2="11" stroke="#1A2535" stroke-width="1.2"/>
+              <polyline points="19.5,15.5 24,10 28.5,15.5" stroke="#1A2535" stroke-width="1.2" fill="none" stroke-linejoin="round"/>
+              <line x1="18" y1="28.5" x2="30" y2="28.5" stroke="#1A2535" stroke-width="1.2"/>
+              <line x1="18" y1="28.5" x2="16.5" y2="33" stroke="#1A2535" stroke-width="0.8" opacity="0.4"/>
+              <line x1="30" y1="28.5" x2="31.5" y2="33" stroke="#1A2535" stroke-width="0.8" opacity="0.4"/>
+              <text x="60" y="20" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="300" letter-spacing="0.06em" fill="#1A2535">LAUTERTUN</text>
+              <text x="60" y="37" font-family="'Cormorant Garamond', Georgia, serif" font-size="19" font-weight="300" letter-spacing="0.06em" fill="#1A2535">PARTNERS</text>
+              <line x1="61" y1="42" x2="252" y2="42" stroke="#B8934A" stroke-width="0.5" opacity="0.6"/>
+              <text x="61" y="47.5" font-family="'DM Sans', sans-serif" font-size="6" fill="#B8934A" letter-spacing="0.18em">RESTRUCTURING  ·  ADVISORY  ·  FINANCIAL MANAGEMENT</text>
+            </svg>
+          </div>
+          <span class="caption">Primary — Light</span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- STACKED & MARK-ONLY -->
+    <div>
+      <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:16px;">Stacked & Mark Only</div>
+      <div class="logo-row">
+
+        <!-- STACKED DARK -->
+        <div class="logo-variant">
+          <div class="logo-bg-dark">
+            <svg width="160" height="110" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Mark centered -->
+              <circle cx="80" cy="36" r="28" stroke="#B8934A" stroke-width="1.1"/>
+              <circle cx="80" cy="36" r="22" stroke="#B8934A" stroke-width="0.55" opacity="0.4"/>
+              <clipPath id="mc3">
+                <circle cx="80" cy="36" r="21.5"/>
+              </clipPath>
+              <g clip-path="url(#mc3)">
+                <line x1="58" y1="46" x2="102" y2="46" stroke="#B8934A" stroke-width="1" opacity="0.9"/>
+                <line x1="58" y1="42.5" x2="102" y2="42.5" stroke="#B8934A" stroke-width="0.9" opacity="0.8"/>
+                <line x1="58" y1="39" x2="102" y2="39" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/>
+                <line x1="58" y1="35" x2="102" y2="35" stroke="#B8934A" stroke-width="0.75" opacity="0.6"/>
+                <line x1="58" y1="31" x2="102" y2="31" stroke="#B8934A" stroke-width="0.65" opacity="0.5"/>
+                <line x1="58" y1="27" x2="102" y2="27" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+                <line x1="58" y1="23" x2="102" y2="23" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+              </g>
+              <line x1="80" y1="39" x2="80" y2="20" stroke="white" stroke-width="1.4"/>
+              <polyline points="74.5,25.5 80,19 85.5,25.5" stroke="white" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+              <line x1="72" y1="39" x2="88" y2="39" stroke="white" stroke-width="1.4"/>
+              <line x1="72" y1="39" x2="70" y2="45" stroke="white" stroke-width="0.9" opacity="0.5"/>
+              <line x1="88" y1="39" x2="90" y2="45" stroke="white" stroke-width="0.9" opacity="0.5"/>
+              <!-- Wordmark stacked -->
+              <text x="80" y="78" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="300" letter-spacing="0.08em" fill="white" text-anchor="middle">LAUTERTUN</text>
+              <text x="80" y="94" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="300" letter-spacing="0.08em" fill="white" text-anchor="middle">PARTNERS</text>
+              <!-- Center rule between mark and type -->
+              <line x1="60" y1="68" x2="100" y2="68" stroke="#B8934A" stroke-width="0.5" opacity="0.4"/>
+            </svg>
+          </div>
+          <span class="caption">Stacked — Dark</span>
+        </div>
+
+        <!-- STACKED LIGHT -->
+        <div class="logo-variant">
+          <div class="logo-bg-light">
+            <svg width="160" height="110" viewBox="0 0 160 110" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="80" cy="36" r="28" stroke="#B8934A" stroke-width="1.1"/>
+              <circle cx="80" cy="36" r="22" stroke="#B8934A" stroke-width="0.55" opacity="0.4"/>
+              <clipPath id="mc4">
+                <circle cx="80" cy="36" r="21.5"/>
+              </clipPath>
+              <g clip-path="url(#mc4)">
+                <line x1="58" y1="46" x2="102" y2="46" stroke="#B8934A" stroke-width="1" opacity="0.9"/>
+                <line x1="58" y1="42.5" x2="102" y2="42.5" stroke="#B8934A" stroke-width="0.9" opacity="0.8"/>
+                <line x1="58" y1="39" x2="102" y2="39" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/>
+                <line x1="58" y1="35" x2="102" y2="35" stroke="#B8934A" stroke-width="0.75" opacity="0.6"/>
+                <line x1="58" y1="31" x2="102" y2="31" stroke="#B8934A" stroke-width="0.65" opacity="0.5"/>
+                <line x1="58" y1="27" x2="102" y2="27" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+                <line x1="58" y1="23" x2="102" y2="23" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+              </g>
+              <line x1="80" y1="39" x2="80" y2="20" stroke="#1A2535" stroke-width="1.4"/>
+              <polyline points="74.5,25.5 80,19 85.5,25.5" stroke="#1A2535" stroke-width="1.4" fill="none" stroke-linejoin="round"/>
+              <line x1="72" y1="39" x2="88" y2="39" stroke="#1A2535" stroke-width="1.4"/>
+              <line x1="72" y1="39" x2="70" y2="45" stroke="#1A2535" stroke-width="0.9" opacity="0.4"/>
+              <line x1="88" y1="39" x2="90" y2="45" stroke="#1A2535" stroke-width="0.9" opacity="0.4"/>
+              <text x="80" y="78" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="300" letter-spacing="0.08em" fill="#1A2535" text-anchor="middle">LAUTERTUN</text>
+              <text x="80" y="94" font-family="'Cormorant Garamond', Georgia, serif" font-size="16" font-weight="300" letter-spacing="0.08em" fill="#1A2535" text-anchor="middle">PARTNERS</text>
+              <line x1="60" y1="68" x2="100" y2="68" stroke="#B8934A" stroke-width="0.5" opacity="0.5"/>
+            </svg>
+          </div>
+          <span class="caption">Stacked — Light</span>
+        </div>
+
+        <!-- MARK ONLY — 3 SIZES -->
+        <div class="logo-variant">
+          <div class="logo-bg-dark" style="display:flex; align-items:center; gap:24px;">
+            <!-- 48px -->
+            <svg width="48" height="48" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.3"/>
+              <circle cx="32" cy="32" r="24" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+              <clipPath id="mc5"><circle cx="32" cy="32" r="23"/></clipPath>
+              <g clip-path="url(#mc5)">
+                <line x1="9" y1="46" x2="55" y2="46" stroke="#B8934A" stroke-width="1.1" opacity="0.9"/>
+                <line x1="9" y1="42" x2="55" y2="42" stroke="#B8934A" stroke-width="1" opacity="0.8"/>
+                <line x1="9" y1="38" x2="55" y2="38" stroke="#B8934A" stroke-width="0.9" opacity="0.7"/>
+                <line x1="9" y1="33" x2="55" y2="33" stroke="#B8934A" stroke-width="0.8" opacity="0.6"/>
+                <line x1="9" y1="28" x2="55" y2="28" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/>
+                <line x1="9" y1="22" x2="55" y2="22" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+                <line x1="9" y1="17" x2="55" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+              </g>
+              <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="1.5"/>
+              <polyline points="26,20 32,13 38,20" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+              <line x1="24" y1="38" x2="40" y2="38" stroke="white" stroke-width="1.5"/>
+              <line x1="24" y1="38" x2="22" y2="44" stroke="white" stroke-width="1" opacity="0.55"/>
+              <line x1="40" y1="38" x2="42" y2="44" stroke="white" stroke-width="1" opacity="0.55"/>
+            </svg>
+            <!-- 32px -->
+            <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.3"/>
+              <clipPath id="mc6"><circle cx="32" cy="32" r="29"/></clipPath>
+              <g clip-path="url(#mc6)">
+                <line x1="3" y1="46" x2="61" y2="46" stroke="#B8934A" stroke-width="1.2" opacity="0.9"/>
+                <line x1="3" y1="40" x2="61" y2="40" stroke="#B8934A" stroke-width="1" opacity="0.7"/>
+                <line x1="3" y1="34" x2="61" y2="34" stroke="#B8934A" stroke-width="0.9" opacity="0.5"/>
+                <line x1="3" y1="27" x2="61" y2="27" stroke="#B8934A" stroke-width="0.8" opacity="0.35"/>
+                <line x1="3" y1="20" x2="61" y2="20" stroke="#B8934A" stroke-width="0.6" opacity="0.25"/>
+              </g>
+              <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="2"/>
+              <polyline points="25,21 32,13 39,21" stroke="white" stroke-width="2" fill="none" stroke-linejoin="round"/>
+              <line x1="22" y1="38" x2="42" y2="38" stroke="white" stroke-width="2"/>
+            </svg>
+            <!-- 20px -->
+            <svg width="20" height="20" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.5"/>
+              <clipPath id="mc7"><circle cx="32" cy="32" r="29"/></clipPath>
+              <g clip-path="url(#mc7)">
+                <line x1="3" y1="44" x2="61" y2="44" stroke="#B8934A" stroke-width="1.4" opacity="0.9"/>
+                <line x1="3" y1="36" x2="61" y2="36" stroke="#B8934A" stroke-width="1.2" opacity="0.65"/>
+                <line x1="3" y1="27" x2="61" y2="27" stroke="#B8934A" stroke-width="1" opacity="0.4"/>
+                <line x1="3" y1="19" x2="61" y2="19" stroke="#B8934A" stroke-width="0.8" opacity="0.25"/>
+              </g>
+              <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="2.5"/>
+              <polyline points="24,22 32,13 40,22" stroke="white" stroke-width="2.5" fill="none" stroke-linejoin="round"/>
+              <line x1="21" y1="38" x2="43" y2="38" stroke="white" stroke-width="2.5"/>
+            </svg>
+          </div>
+          <span class="caption">Mark Only — 48 / 32 / 20px</span>
+        </div>
+
+        <!-- GOLD MONO -->
+        <div class="logo-variant">
+          <div class="logo-bg-gold" style="display:flex; align-items:center; justify-content:center;">
+            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="32" cy="32" r="30" stroke="white" stroke-width="1.2"/>
+              <circle cx="32" cy="32" r="24" stroke="white" stroke-width="0.6" opacity="0.5"/>
+              <clipPath id="mc8"><circle cx="32" cy="32" r="23"/></clipPath>
+              <g clip-path="url(#mc8)">
+                <line x1="9" y1="46" x2="55" y2="46" stroke="white" stroke-width="1.1" opacity="0.8"/>
+                <line x1="9" y1="42" x2="55" y2="42" stroke="white" stroke-width="1" opacity="0.7"/>
+                <line x1="9" y1="38" x2="55" y2="38" stroke="white" stroke-width="0.9" opacity="0.6"/>
+                <line x1="9" y1="33" x2="55" y2="33" stroke="white" stroke-width="0.8" opacity="0.5"/>
+                <line x1="9" y1="28" x2="55" y2="28" stroke="white" stroke-width="0.7" opacity="0.4"/>
+                <line x1="9" y1="22" x2="55" y2="22" stroke="white" stroke-width="0.6" opacity="0.3"/>
+                <line x1="9" y1="17" x2="55" y2="17" stroke="white" stroke-width="0.5" opacity="0.2"/>
+              </g>
+              <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="1.5"/>
+              <polyline points="26,20 32,13 38,20" stroke="white" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+              <line x1="24" y1="38" x2="40" y2="38" stroke="white" stroke-width="1.5"/>
+              <line x1="24" y1="38" x2="22" y2="44" stroke="white" stroke-width="1" opacity="0.55"/>
+              <line x1="40" y1="38" x2="42" y2="44" stroke="white" stroke-width="1" opacity="0.55"/>
+            </svg>
+          </div>
+          <span class="caption">Gold Mono</span>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     COLOR PALETTE
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">Color System</span>
+  <h2 style="margin-bottom:8px">Color Palette</h2>
+  <p style="margin-bottom:36px">Built around deep navy authority, warm amber expertise, and sage hope — the triad communicates trustworthiness, earned wisdom, and forward trajectory.</p>
+
+  <div style="margin-bottom:40px">
+    <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Primary Palette</div>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-block" style="background:#1A2535"></div>
+        <div class="swatch-name">Ink</div>
+        <div class="swatch-hex">#1A2535</div>
+        <div class="swatch-use">Primary backgrounds, display text, marks</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#243447"></div>
+        <div class="swatch-name">Deep Navy</div>
+        <div class="swatch-hex">#243447</div>
+        <div class="swatch-use">Section backgrounds, card fills</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#3A5472; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Steel</div>
+        <div class="swatch-hex">#3A5472</div>
+        <div class="swatch-use">Body text, secondary elements</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#B8934A"></div>
+        <div class="swatch-name">Burnished Gold</div>
+        <div class="swatch-hex">#B8934A</div>
+        <div class="swatch-use">Primary accent, logo ring, rules, labels</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#D4AC6E; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Warm Gold</div>
+        <div class="swatch-hex">#D4AC6E</div>
+        <div class="swatch-use">Hover states, icon fills, highlight text</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#E8C97A; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Amber</div>
+        <div class="swatch-hex">#E8C97A</div>
+        <div class="swatch-use">Taglines on dark, data callouts</div>
+      </div>
+    </div>
+  </div>
+
+  <div>
+    <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Supporting Palette</div>
+    <div class="palette-grid">
+      <div class="swatch">
+        <div class="swatch-block" style="background:#4A7868; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Sage</div>
+        <div class="swatch-hex">#4A7868</div>
+        <div class="swatch-use">Hope, growth, positive indicators, CTAs</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#6A9E8E; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Sage Light</div>
+        <div class="swatch-hex">#6A9E8E</div>
+        <div class="swatch-use">Hover, success states</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#F6F2EB; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Parchment</div>
+        <div class="swatch-hex">#F6F2EB</div>
+        <div class="swatch-use">Card backgrounds, alternating sections</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#FAF8F4; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">Cream</div>
+        <div class="swatch-hex">#FAF8F4</div>
+        <div class="swatch-use">Page background, light mode base</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#FFFFFF; border:1px solid rgba(0,0,0,.06)"></div>
+        <div class="swatch-name">White</div>
+        <div class="swatch-hex">#FFFFFF</div>
+        <div class="swatch-use">Card interiors, form fields</div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-block" style="background:#C05B4A"></div>
+        <div class="swatch-name">Terracotta</div>
+        <div class="swatch-hex">#C05B4A</div>
+        <div class="swatch-use">Warnings, distress indicators, alerts</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     TYPOGRAPHY
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">Typography</span>
+  <h2 style="margin-bottom:36px">Type System</h2>
+
+  <div class="two-col">
+    <div>
+      <div class="type-sample">
+        <div class="type-meta">Display / Heading — Cormorant Garamond</div>
+        <div style="font-family:'Cormorant Garamond', Georgia, serif; font-size:48px; font-weight:300; line-height:1.1; color:var(--ink); letter-spacing:-.01em">
+          Clarity<br><em>through</em><br>Structure
+        </div>
+        <div class="spec-row">
+          <span class="spec">Cormorant Garamond</span>
+          <span class="spec">Light 300</span>
+          <span class="spec">−0.01em tracking</span>
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">Subheading</div>
+        <div style="font-family:'Cormorant Garamond', Georgia, serif; font-size:26px; font-weight:400; line-height:1.3; color:var(--ink)">
+          Restructuring Advisory<br>for Lower Middle Market
+        </div>
+        <div class="spec-row">
+          <span class="spec">26px</span>
+          <span class="spec">Regular 400</span>
+          <span class="spec">1.3 leading</span>
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">Label / Overline</div>
+        <div style="font-family:'DM Sans', sans-serif; font-size:10px; font-weight:500; letter-spacing:.2em; text-transform:uppercase; color:var(--gold)">
+          Transaction Diligence & Execution
+        </div>
+        <div class="spec-row">
+          <span class="spec">DM Sans</span>
+          <span class="spec">10px</span>
+          <span class="spec">Medium 500</span>
+          <span class="spec">0.20em</span>
+          <span class="spec">UPPERCASE</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="type-sample">
+        <div class="type-meta">Body — DM Sans</div>
+        <div style="font-family:'DM Sans', sans-serif; font-size:15px; font-weight:300; line-height:1.8; color:var(--mid); max-width:420px">
+          We work alongside owners and operators facing the full weight of financial distress — from SBA obligations and covenant defaults to operational decline. Our role is to clarify the path, stabilize the business, and rebuild toward sustainable value.
+        </div>
+        <div class="spec-row">
+          <span class="spec">DM Sans</span>
+          <span class="spec">15px</span>
+          <span class="spec">Light 300</span>
+          <span class="spec">1.8 leading</span>
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">Navigation / UI</div>
+        <div style="font-family:'DM Sans', sans-serif; font-size:13px; font-weight:400; color:var(--ink); letter-spacing:.03em">
+          Services &nbsp;·&nbsp; About &nbsp;·&nbsp; Insights &nbsp;·&nbsp; Contact
+        </div>
+        <div class="spec-row">
+          <span class="spec">13px</span>
+          <span class="spec">Regular 400</span>
+          <span class="spec">0.03em</span>
+        </div>
+      </div>
+
+      <div class="type-sample">
+        <div class="type-meta">Data / Callout Number</div>
+        <div style="font-family:'Cormorant Garamond', Georgia, serif; font-size:60px; font-weight:300; line-height:1; color:var(--ink)">
+          $2.4<span style="font-size:28px; color:var(--gold)">B</span>
+        </div>
+        <div style="font-family:'DM Sans', sans-serif; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--mid); margin-top:6px">
+          Transactions Advised
+        </div>
+        <div class="spec-row" style="margin-top:10px">
+          <span class="spec">Cormorant Garamond 60px</span>
+          <span class="spec">DM Sans 11px label</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     SPACING & GRID
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">Spacing & Grid</span>
+  <h2 style="margin-bottom:32px">Spatial System</h2>
+
+  <div class="two-col">
+    <div>
+      <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Base-8 Spacing Scale</div>
+      <div style="display:flex; flex-direction:column; gap:12px;">
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:4px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">4px</span>
+          <span style="font-size:11px; color:var(--mid)">xs — component internal padding</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:8px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">8px</span>
+          <span style="font-size:11px; color:var(--mid)">sm — tight spacing, icon gaps</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:16px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">16px</span>
+          <span style="font-size:11px; color:var(--mid)">md — card padding, form gaps</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:24px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">24px</span>
+          <span style="font-size:11px; color:var(--mid)">lg — element separation</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:32px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">32px</span>
+          <span style="font-size:11px; color:var(--mid)">xl — section padding, card gaps</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:48px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">48px</span>
+          <span style="font-size:11px; color:var(--mid)">2xl — module spacing</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:64px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">64px</span>
+          <span style="font-size:11px; color:var(--mid)">3xl — hero padding, page sections</span>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px">
+          <div style="width:96px; height:16px; background:var(--gold); border-radius:1px"></div>
+          <span style="font-size:12px; color:var(--mid); width:40px">96px</span>
+          <span style="font-size:11px; color:var(--mid)">4xl — large section breaks</span>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Grid & Layout</div>
+      <div style="display:flex; flex-direction:column; gap:14px; font-size:13px; color:var(--mid)">
+        <div style="padding:14px 16px; background:var(--parchment); border:1px solid var(--rule); border-radius:3px">
+          <strong style="color:var(--ink); font-size:12px">Max Width</strong><br>
+          1100px container, centered
+        </div>
+        <div style="padding:14px 16px; background:var(--parchment); border:1px solid var(--rule); border-radius:3px">
+          <strong style="color:var(--ink); font-size:12px">Page Gutter</strong><br>
+          48px desktop / 24px tablet / 16px mobile
+        </div>
+        <div style="padding:14px 16px; background:var(--parchment); border:1px solid var(--rule); border-radius:3px">
+          <strong style="color:var(--ink); font-size:12px">Column Grid</strong><br>
+          12-column, 24px gutters
+        </div>
+        <div style="padding:14px 16px; background:var(--parchment); border:1px solid var(--rule); border-radius:3px">
+          <strong style="color:var(--ink); font-size:12px">Border Radius</strong><br>
+          2px subtle / 4px cards / 6px modals
+        </div>
+        <div style="padding:14px 16px; background:var(--parchment); border:1px solid var(--rule); border-radius:3px">
+          <strong style="color:var(--ink); font-size:12px">Rule Weight</strong><br>
+          0.5px hairline / 1px standard — both in rgba(26,37,53,.10)
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     COMPONENTS
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">UI Components</span>
+  <h2 style="margin-bottom:36px">Component Library</h2>
+
+  <!-- BUTTONS -->
+  <div style="margin-bottom:48px">
+    <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Buttons & CTAs</div>
+    <div style="display:flex; gap:16px; flex-wrap:wrap; align-items:center">
+      <button style="background:var(--ink); color:white; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; padding:14px 28px; border:none; border-radius:2px; cursor:pointer">
+        Schedule a Consultation
+      </button>
+      <button style="background:transparent; color:var(--ink); font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; padding:13px 27px; border:1.5px solid var(--ink); border-radius:2px; cursor:pointer">
+        Learn More
+      </button>
+      <button style="background:var(--gold); color:white; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; padding:14px 28px; border:none; border-radius:2px; cursor:pointer">
+        Request Assessment
+      </button>
+      <button style="background:var(--sage); color:white; font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:.1em; text-transform:uppercase; padding:14px 28px; border:none; border-radius:2px; cursor:pointer">
+        Get Started
+      </button>
+      <button style="background:transparent; color:var(--gold); font-family:'DM Sans',sans-serif; font-size:12px; font-weight:500; letter-spacing:.06em; padding:0; border:none; border-bottom:1px solid var(--gold); cursor:pointer">
+        View Case Studies →
+      </button>
+    </div>
+  </div>
+
+  <!-- SERVICE CARDS -->
+  <div style="margin-bottom:48px">
+    <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Service Cards</div>
+    <div style="display:grid; grid-template-columns: repeat(4, 1fr); gap:16px">
+
+      <div style="padding:24px; border:1px solid var(--rule); border-radius:4px; background:var(--white)">
+        <div style="width:32px; height:32px; margin-bottom:16px">
+          <!-- Filter/restructure icon using the mark motif -->
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14.5" stroke="#B8934A" stroke-width="1"/><clipPath id="si1"><circle cx="16" cy="16" r="14"/></clipPath><g clip-path="url(#si1)"><line x1="2" y1="23" x2="30" y2="23" stroke="#B8934A" stroke-width="0.9" opacity="0.9"/><line x1="2" y1="19.5" x2="30" y2="19.5" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/><line x1="2" y1="16" x2="30" y2="16" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/><line x1="2" y1="12" x2="30" y2="12" stroke="#B8934A" stroke-width="0.6" opacity="0.35"/></g><line x1="16" y1="19" x2="16" y2="8" stroke="#1A2535" stroke-width="1.2"/><polyline points="12.5,12 16,7.5 19.5,12" stroke="#1A2535" stroke-width="1.2" fill="none"/><line x1="11" y1="19" x2="21" y2="19" stroke="#1A2535" stroke-width="1.2"/></svg>
+        </div>
+        <div style="font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px">Restructuring</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:400; color:var(--ink); margin-bottom:10px">Turnaround &amp;<br>Restructuring</div>
+        <div style="font-size:12px; line-height:1.7; color:var(--mid)">SBA workouts, debt restructuring, operational stabilization for businesses under financial pressure.</div>
+      </div>
+
+      <div style="padding:24px; border:1px solid var(--rule); border-radius:4px; background:var(--white)">
+        <div style="width:32px; height:32px; margin-bottom:16px">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14.5" stroke="#B8934A" stroke-width="1"/><clipPath id="si2"><circle cx="16" cy="16" r="14"/></clipPath><g clip-path="url(#si2)"><line x1="2" y1="23" x2="30" y2="23" stroke="#B8934A" stroke-width="0.9" opacity="0.9"/><line x1="2" y1="19.5" x2="30" y2="19.5" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/><line x1="2" y1="16" x2="30" y2="16" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/><line x1="2" y1="12" x2="30" y2="12" stroke="#B8934A" stroke-width="0.6" opacity="0.35"/></g><line x1="16" y1="19" x2="16" y2="8" stroke="#1A2535" stroke-width="1.2"/><polyline points="12.5,12 16,7.5 19.5,12" stroke="#1A2535" stroke-width="1.2" fill="none"/><line x1="11" y1="19" x2="21" y2="19" stroke="#1A2535" stroke-width="1.2"/></svg>
+        </div>
+        <div style="font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px">Advisory</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:400; color:var(--ink); margin-bottom:10px">M&amp;A Advisory<br>Services</div>
+        <div style="font-size:12px; line-height:1.7; color:var(--mid)">Buy-side and sell-side advisory, transaction diligence, and execution for lower middle market deals.</div>
+      </div>
+
+      <div style="padding:24px; border:1px solid var(--rule); border-radius:4px; background:var(--white)">
+        <div style="width:32px; height:32px; margin-bottom:16px">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14.5" stroke="#B8934A" stroke-width="1"/><clipPath id="si3"><circle cx="16" cy="16" r="14"/></clipPath><g clip-path="url(#si3)"><line x1="2" y1="23" x2="30" y2="23" stroke="#B8934A" stroke-width="0.9" opacity="0.9"/><line x1="2" y1="19.5" x2="30" y2="19.5" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/><line x1="2" y1="16" x2="30" y2="16" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/><line x1="2" y1="12" x2="30" y2="12" stroke="#B8934A" stroke-width="0.6" opacity="0.35"/></g><line x1="16" y1="19" x2="16" y2="8" stroke="#1A2535" stroke-width="1.2"/><polyline points="12.5,12 16,7.5 19.5,12" stroke="#1A2535" stroke-width="1.2" fill="none"/><line x1="11" y1="19" x2="21" y2="19" stroke="#1A2535" stroke-width="1.2"/></svg>
+        </div>
+        <div style="font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px">Finance</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:400; color:var(--ink); margin-bottom:10px">Office of<br>the CFO</div>
+        <div style="font-size:12px; line-height:1.7; color:var(--mid)">Fractional and interim CFO services, cash management, lender relations, and financial reporting.</div>
+      </div>
+
+      <div style="padding:24px; border:1px solid var(--rule); border-radius:4px; background:var(--white)">
+        <div style="width:32px; height:32px; margin-bottom:16px">
+          <svg viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="14.5" stroke="#B8934A" stroke-width="1"/><clipPath id="si4"><circle cx="16" cy="16" r="14"/></clipPath><g clip-path="url(#si4)"><line x1="2" y1="23" x2="30" y2="23" stroke="#B8934A" stroke-width="0.9" opacity="0.9"/><line x1="2" y1="19.5" x2="30" y2="19.5" stroke="#B8934A" stroke-width="0.8" opacity="0.7"/><line x1="2" y1="16" x2="30" y2="16" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/><line x1="2" y1="12" x2="30" y2="12" stroke="#B8934A" stroke-width="0.6" opacity="0.35"/></g><line x1="16" y1="19" x2="16" y2="8" stroke="#1A2535" stroke-width="1.2"/><polyline points="12.5,12 16,7.5 19.5,12" stroke="#1A2535" stroke-width="1.2" fill="none"/><line x1="11" y1="19" x2="21" y2="19" stroke="#1A2535" stroke-width="1.2"/></svg>
+        </div>
+        <div style="font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:8px">Operations</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:17px; font-weight:400; color:var(--ink); margin-bottom:10px">Performance<br>Improvement</div>
+        <div style="font-size:12px; line-height:1.7; color:var(--mid)">Operational diagnostics, EBITDA improvement, and working capital optimization across F&amp;B, hospitality, and manufacturing.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- STAT CALLOUT -->
+  <div style="margin-bottom:48px">
+    <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:20px;">Stat / Callout Band</div>
+    <div style="background:var(--ink); padding:40px 48px; border-radius:4px; display:grid; grid-template-columns:1fr 1fr 1fr 1fr; gap:32px">
+      <div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:44px; font-weight:300; color:white; line-height:1">$2.4<span style="font-size:22px; color:var(--amber)">B</span></div>
+        <div style="font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--amber); margin-top:6px">Transactions Advised</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:44px; font-weight:300; color:white; line-height:1">200<span style="font-size:22px; color:var(--amber)">+</span></div>
+        <div style="font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--amber); margin-top:6px">Engagements Completed</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:44px; font-weight:300; color:white; line-height:1">4</div>
+        <div style="font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--amber); margin-top:6px">Core Industries Served</div>
+      </div>
+      <div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:44px; font-weight:300; color:white; line-height:1">98<span style="font-size:22px; color:var(--amber)">%</span></div>
+        <div style="font-size:9px; letter-spacing:.16em; text-transform:uppercase; color:var(--amber); margin-top:6px">Client Retention Rate</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     APPLICATIONS
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">Applications</span>
+  <h2 style="margin-bottom:36px">Brand in Context</h2>
+
+  <div style="display:grid; grid-template-columns:1fr 1fr; gap:32px; margin-bottom:40px">
+
+    <!-- BUSINESS CARD FRONT -->
+    <div>
+      <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:16px;">Business Card — Front</div>
+      <div class="biz-card">
+        <div>
+          <!-- Small mark -->
+          <svg width="28" height="28" viewBox="0 0 64 64" fill="none">
+            <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.5"/>
+            <clipPath id="bc1"><circle cx="32" cy="32" r="29"/></clipPath>
+            <g clip-path="url(#bc1)">
+              <line x1="3" y1="46" x2="61" y2="46" stroke="#B8934A" stroke-width="1.2" opacity="0.9"/>
+              <line x1="3" y1="39" x2="61" y2="39" stroke="#B8934A" stroke-width="1" opacity="0.7"/>
+              <line x1="3" y1="32" x2="61" y2="32" stroke="#B8934A" stroke-width="0.9" opacity="0.5"/>
+              <line x1="3" y1="24" x2="61" y2="24" stroke="#B8934A" stroke-width="0.7" opacity="0.35"/>
+              <line x1="3" y1="17" x2="61" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.2"/>
+            </g>
+            <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="2"/>
+            <polyline points="25,21 32,13 39,21" stroke="white" stroke-width="2" fill="none"/>
+            <line x1="22" y1="38" x2="42" y2="38" stroke="white" stroke-width="2"/>
+          </svg>
+        </div>
+        <div>
+          <div class="biz-name">Alexander Reid</div>
+          <div class="biz-title">Managing Director, Restructuring</div>
+          <div class="biz-contact" style="margin-top:12px">
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="6e0f1c0b070a2e020f1b1a0b1c1a1b001e0f1c1a000b1c1d400d0103">[email&#160;protected]</a><br>
+            +1 (312) 555 0140<br>
+            lautertunpartners.com
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- BUSINESS CARD BACK -->
+    <div>
+      <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:16px;">Business Card — Back</div>
+      <div class="biz-card" style="align-items:center; justify-content:center; position:relative; overflow:hidden">
+        <!-- Large background mark -->
+        <svg style="position:absolute; right:-30px; top:50%; transform:translateY(-50%); opacity:.06" width="200" height="200" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.2" fill="none"/>
+          <clipPath id="bc2"><circle cx="32" cy="32" r="29"/></clipPath>
+          <g clip-path="url(#bc2)">
+            <line x1="3" y1="46" x2="61" y2="46" stroke="#B8934A" stroke-width="1.2"/>
+            <line x1="3" y1="39" x2="61" y2="39" stroke="#B8934A" stroke-width="1"/>
+            <line x1="3" y1="32" x2="61" y2="32" stroke="#B8934A" stroke-width="0.9"/>
+            <line x1="3" y1="24" x2="61" y2="24" stroke="#B8934A" stroke-width="0.7"/>
+            <line x1="3" y1="17" x2="61" y2="17" stroke="#B8934A" stroke-width="0.5"/>
+          </g>
+          <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="2"/>
+          <polyline points="25,21 32,13 39,21" stroke="white" stroke-width="2" fill="none"/>
+          <line x1="22" y1="38" x2="42" y2="38" stroke="white" stroke-width="2"/>
+        </svg>
+        <div style="text-align:center; position:relative; z-index:1">
+          <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:22px; font-weight:300; letter-spacing:.06em; color:white; margin-bottom:8px">LAUTERTUN</div>
+          <div style="width:48px; height:0.5px; background:var(--gold); margin:0 auto 8px"></div>
+          <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:22px; font-weight:300; letter-spacing:.06em; color:white; margin-bottom:12px">PARTNERS</div>
+          <div style="font-family:'DM Sans',sans-serif; font-size:7px; letter-spacing:.18em; text-transform:uppercase; color:var(--amber); opacity:.8">Restructuring · Advisory · Financial Management</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- EMAIL HEADER MOCKUP -->
+  <div>
+    <div style="font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--mid); margin-bottom:16px;">Email Header</div>
+    <div style="border:1px solid var(--rule); border-radius:4px; overflow:hidden; max-width:600px">
+      <div style="background:var(--ink); padding:20px 32px; display:flex; align-items:center; gap:16px">
+        <svg width="36" height="36" viewBox="0 0 64 64" fill="none">
+          <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.3"/>
+          <circle cx="32" cy="32" r="24" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+          <clipPath id="eh1"><circle cx="32" cy="32" r="23"/></clipPath>
+          <g clip-path="url(#eh1)">
+            <line x1="9" y1="46" x2="55" y2="46" stroke="#B8934A" stroke-width="1.1" opacity="0.9"/>
+            <line x1="9" y1="42" x2="55" y2="42" stroke="#B8934A" stroke-width="1" opacity="0.8"/>
+            <line x1="9" y1="38" x2="55" y2="38" stroke="#B8934A" stroke-width="0.9" opacity="0.7"/>
+            <line x1="9" y1="33" x2="55" y2="33" stroke="#B8934A" stroke-width="0.8" opacity="0.6"/>
+            <line x1="9" y1="28" x2="55" y2="28" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/>
+            <line x1="9" y1="22" x2="55" y2="22" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+            <line x1="9" y1="17" x2="55" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+          </g>
+          <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="1.5"/>
+          <polyline points="26,20 32,13 38,20" stroke="white" stroke-width="1.5" fill="none"/>
+          <line x1="24" y1="38" x2="40" y2="38" stroke="white" stroke-width="1.5"/>
+          <line x1="24" y1="38" x2="22" y2="44" stroke="white" stroke-width="1" opacity="0.5"/>
+          <line x1="40" y1="38" x2="42" y2="44" stroke="white" stroke-width="1" opacity="0.5"/>
+        </svg>
+        <div>
+          <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:18px; font-weight:300; color:white; letter-spacing:.05em">LAUTERTUN PARTNERS</div>
+          <div style="font-size:8px; letter-spacing:.18em; text-transform:uppercase; color:var(--amber); margin-top:2px">Restructuring · Advisory · Financial Management</div>
+        </div>
+      </div>
+      <div style="background:white; padding:32px; border-top:2px solid var(--gold)">
+        <div style="font-size:10px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold); margin-bottom:10px">Client Update</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:24px; font-weight:300; color:var(--ink); margin-bottom:12px">Restructuring Progress Report</div>
+        <div style="font-size:13px; line-height:1.8; color:var(--mid)">Dear [Client Name], please find your monthly restructuring progress report attached. We continue to make meaningful progress against our agreed milestones...</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     BRAND VOICE / DO·DON'T
+════════════════════════════════════════════════ -->
+<div class="section">
+  <span class="label">Brand Voice & Usage</span>
+  <h2 style="margin-bottom:32px">Guidelines</h2>
+
+  <div class="dont-grid" style="margin-bottom:40px">
+    <div class="do-card">
+      <h4>✓ Do</h4>
+      <p>Use Cormorant Garamond for all display, headlines, and brand moments. Pair with DM Sans for body and UI. Use the wordmark in all-caps with generous tracking (0.06–0.10em). Place the mark on dark navy or parchment backgrounds. Allow generous white space — restraint is strength.</p>
+    </div>
+    <div class="dont-card">
+      <h4>✗ Don't</h4>
+      <p>Don't use the mark at sizes below 20px without switching to the simplified 4-line version. Don't place the logo on busy photographic backgrounds without a dark overlay. Don't use gold text on white backgrounds at small sizes (legibility fails). Never stretch or rotate the mark. Don't use more than two weights of either typeface in a single layout.</p>
+    </div>
+    <div class="do-card">
+      <h4>✓ Voice: Tone</h4>
+      <p>Speak as a trusted, experienced partner — not a salesperson. Use plain, declarative sentences. Acknowledge difficulty before offering hope. Demonstrate competence through specificity. Our clients are under pressure; every word should reduce anxiety, not amplify it.</p>
+    </div>
+    <div class="dont-card">
+      <h4>✗ Voice: Avoid</h4>
+      <p>Avoid jargon-first communication ("leveraging synergistic value creation"). Don't be vague about outcomes. Avoid institutional coldness — this firm works with small business owners, not Fortune 500 legal departments. Never use urgency as a fear tactic.</p>
+    </div>
+  </div>
+
+  <!-- BRAND POSITIONING STATEMENT -->
+  <div style="background:var(--ink); padding:48px; border-radius:4px; position:relative; overflow:hidden">
+    <svg style="position:absolute; right:32px; top:50%; transform:translateY(-50%); opacity:.04" width="240" height="240" viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="30" stroke="white" stroke-width="1.2" fill="none"/>
+      <clipPath id="bg1"><circle cx="32" cy="32" r="29"/></clipPath>
+      <g clip-path="url(#bg1)">
+        <line x1="3" y1="46" x2="61" y2="46" stroke="white" stroke-width="1.2"/>
+        <line x1="3" y1="39" x2="61" y2="39" stroke="white" stroke-width="1"/>
+        <line x1="3" y1="32" x2="61" y2="32" stroke="white" stroke-width="0.9"/>
+        <line x1="3" y1="24" x2="61" y2="24" stroke="white" stroke-width="0.7"/>
+        <line x1="3" y1="17" x2="61" y2="17" stroke="white" stroke-width="0.5"/>
+      </g>
+      <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="2"/>
+      <polyline points="25,21 32,13 39,21" stroke="white" stroke-width="2" fill="none"/>
+      <line x1="22" y1="38" x2="42" y2="38" stroke="white" stroke-width="2"/>
+    </svg>
+    <span class="label" style="color:var(--amber)">Positioning Statement</span>
+    <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:28px; font-weight:300; line-height:1.4; color:white; max-width:680px; position:relative; z-index:1">
+      "As a lauter tun separates what is valuable from what is spent — we clarify, stabilize, and restore the businesses our clients have built."
+    </div>
+    <div style="margin-top:20px; width:48px; height:1px; background:var(--gold)"></div>
+  </div>
+
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════════ -->
+<div style="background:var(--ink); padding:32px 48px; display:flex; align-items:center; justify-content:space-between; max-width:100%">
+  <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:14px; font-weight:300; letter-spacing:.06em; color:rgba(255,255,255,.4)">
+    LAUTERTUN PARTNERS
+  </div>
+  <div style="font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:rgba(255,255,255,.25)">
+    Brand Identity Syste
