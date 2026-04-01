@@ -116,10 +116,11 @@
   background: var(--color-ink-navy);
   border-color: transparent;
 }
-.sp-cap-card--featured .sp-cap-number { color: var(--color-gold); }
-.sp-cap-card--featured h3 { color: var(--color-white); }
-.sp-cap-card--featured > p { color: rgba(255,255,255,0.65); }
-.sp-cap-card--featured .service-list li { color: rgba(255,255,255,0.7); }
+.sp-cap-card--featured .sp-cap-number { color: var(--color-gold) !important; }
+.sp-cap-card--featured h3 { color: var(--color-white) !important; border-bottom-color: var(--color-gold); }
+.sp-cap-card--featured > p { color: rgba(255,255,255,0.65) !important; }
+.sp-cap-card--featured p { color: rgba(255,255,255,0.65); }
+.sp-cap-card--featured .service-list li { color: rgba(255,255,255,0.7) !important; }
 
 .sp-cap-number {
   font-size: var(--text-xl);
