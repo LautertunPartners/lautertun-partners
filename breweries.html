@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brewery Restructuring — Lautertun Partners</title>
+<meta name="description" content="SBA debt restructuring specialists for craft breweries facing distress. Lautertun Partners helps brewery owners exit cleanly and affordably.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="lautertun-brand.css">
+<link rel="stylesheet" href="site.css">
+<style>
+
+/* ── BREWERY PAGE OVERRIDES & ADDITIONS ────────────────────────────────── */
+
+/* Hero — brewery-specific */
+.hero-brewery .hero-headline {
+  font-size: clamp(2.4rem, 5.5vw, 3.8rem);
+}
+.hero-brewery .hero-sub {
+  max-width: 580px;
+}
+.hero-brewery .hero-eyebrow {
+  letter-spacing: var(--tracking-widest);
+  font-size: var(--text-xs);
+}
+
+/* Inline contact banner */
+.contact-banner {
+  background: var(--color-gold);
+  padding: var(--space-8) 0;
+  text-align: center;
+}
+.contact-banner h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: var(--weight-light);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+.contact-banner p {
+  font-size: var(--text-base);
+  color: rgba(255,255,255,0.85);
+  margin-bottom: var(--space-6);
+}
+.btn-white {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-ink-navy);
+  background: var(--color-white);
+  border: 1px solid var(--color-white);
+  padding: 14px 32px;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.btn-white:hover {
+  background: transparent;
+  color: var(--color-white);
+}
+.btn-ghost-dark {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-white);
+  border: 1px solid rgba(255,255,255,0.5);
+  padding: 14px 32px;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  margin-left: var(--space-4);
+  transition: border-color 0.15s ease;
+}
+.btn-ghost-dark:hover { border-color: var(--color-white); }
+
+/* Industry narrative / article */
+.article-section {
+  background: var(--color-bg-page);
+  padding: var(--space-24) 0;
+}
+.article-wrap {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 var(--space-12);
+}
+.article-label {
+  display: block;
+  margin-bottom: var(--space-6);
+}
+.article-title {
+  font-family: var(--font-serif);
+  font-size: clamp(1.9rem, 4vw, var(--text-3xl));
+  font-weight: var(--weight-light);
+  line-height: var(--leading-tight);
+  color: var(--color-ink-navy);
+  margin-bottom: var(--space-6);
+  letter-spacing: var(--tracking-tight);
+}
+.article-byline {
+  font-size: var(--text-xs);
+  letter-spacing: var(--tracking-wider);
+  text-transform: uppercase;
+  color: var(--color-steel);
+  opacity: 0.65;
+  margin-bottom: var(--space-8);
+  padding-bottom: var(--space-6);
+  border-bottom: var(--border-hairline);
+}
+.article-lead {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-light);
+  line-height: 1.55;
+  color: var(--color-ink-navy);
+  margin-bottom: var(--space-8);
+}
+.article-body p {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  line-height: 1.75;
+  color: var(--color-steel);
+  margin-bottom: var(--space-6);
+}
+.article-body h3 {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-regular);
+  color: var(--color-ink-navy);
+  margin: var(--space-10) 0 var(--space-4);
+}
+.article-body .article-pullquote {
+  border-left: var(--border-gold-thick);
+  padding: var(--space-5) var(--space-8);
+  margin: var(--space-10) 0;
+  background: var(--color-parchment);
+}
+.article-body .article-pullquote p {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-light);
+  line-height: var(--leading-snug);
+  color: var(--color-ink-navy);
+  margin-bottom: 0;
+  font-style: italic;
+}
+
+/* Article inline CTA */
+.article-cta-inline {
+  background: var(--color-ink-navy);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-8) var(--space-10);
+  margin: var(--space-10) 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.article-cta-inline p {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  color: rgba(255,255,255,0.75);
+  margin-bottom: 0;
+  max-width: 440px;
+}
+.article-cta-inline p strong {
+  display: block;
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  font-weight: var(--weight-light);
+  color: var(--color-white);
+  margin-bottom: var(--space-2);
+}
+.btn-gold {
+  display: inline-block;
+  font-family: var(--font-sans);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-medium);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--color-white);
+  background: var(--color-gold);
+  border: 1px solid var(--color-gold);
+  padding: 14px 28px;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity 0.15s ease;
+  flex-shrink: 0;
+}
+.btn-gold:hover { opacity: 0.88; }
+
+/* Capabilities grid for brewery */
+.capabilities {
+  background: var(--color-bg-surface);
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+}
+.capabilities-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+.cap-card {
+  background: var(--color-white);
+  border: var(--border-hairline);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-8);
+  box-shadow: var(--shadow-sm);
+}
+.cap-card .ltp-overline {
+  display: block;
+  margin-bottom: var(--space-4);
+}
+.cap-card h3 {
+  font-family: var(--font-sans);
+  font-size: var(--text-md);
+  font-weight: var(--weight-semibold);
+  letter-spacing: var(--tracking-wide);
+  color: var(--color-ink-navy);
+  text-transform: uppercase;
+  margin-bottom: var(--space-4);
+}
+.cap-card p {
+  font-size: var(--text-base);
+  color: var(--color-steel);
+  line-height: var(--leading-normal);
+  margin-bottom: var(--space-5);
+}
+.cap-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+.cap-list li {
+  font-size: var(--text-sm);
+  color: var(--color-steel);
+  padding-left: var(--space-5);
+  position: relative;
+}
+.cap-list li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--color-gold);
+}
+
+@media (max-width: 768px) {
+  .capabilities-grid { grid-template-columns: 1fr; }
+  .article-wrap { padding: 0 var(--space-6); }
+  .article-cta-inline { flex-direction: column; gap: var(--space-4); }
+  .btn-ghost-dark { margin-left: 0; margin-top: var(--space-3); }
+  .contact-banner .btn-ghost-dark { display: block; margin: var(--space-3) auto 0; width: fit-content; }
+}
+
+/* Active nav state */
+.nav-active {
+  color: var(--color-ink-navy) !important;
+  border-bottom: 2px solid var(--color-gold);
+  padding-bottom: 2px;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ── NAVIGATION ─────────────────────────────────────────────────────────── -->
+<header class="nav-wrap">
+  <nav class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Lautertun Partners">
+      <svg width="32" height="32" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="1.2" fill="none"/>
+        <circle cx="32" cy="32" r="24" stroke="#B8934A" stroke-width="0.6" fill="none" opacity="0.4"/>
+        <clipPath id="nc"><circle cx="32" cy="32" r="23"/></clipPath>
+        <g clip-path="url(#nc)">
+          <line x1="9" y1="46" x2="55" y2="46" stroke="#B8934A" stroke-width="1.1" opacity="0.9"/>
+          <line x1="9" y1="42" x2="55" y2="42" stroke="#B8934A" stroke-width="1.0" opacity="0.8"/>
+          <line x1="9" y1="38" x2="55" y2="38" stroke="#B8934A" stroke-width="0.9" opacity="0.7"/>
+          <line x1="9" y1="33" x2="55" y2="33" stroke="#B8934A" stroke-width="0.8" opacity="0.6"/>
+          <line x1="9" y1="28" x2="55" y2="28" stroke="#B8934A" stroke-width="0.7" opacity="0.5"/>
+          <line x1="9" y1="22" x2="55" y2="22" stroke="#B8934A" stroke-width="0.6" opacity="0.4"/>
+          <line x1="9" y1="17" x2="55" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.3"/>
+        </g>
+        <line x1="32" y1="38" x2="32" y2="14" stroke="#1A2535" stroke-width="1.5"/>
+        <polyline points="26,20 32,13 38,20" stroke="#1A2535" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+        <line x1="24" y1="38" x2="40" y2="38" stroke="#1A2535" stroke-width="1.5"/>
+        <line x1="24" y1="38" x2="22" y2="44" stroke="#1A2535" stroke-width="1" opacity="0.5"/>
+        <line x1="40" y1="38" x2="42" y2="44" stroke="#1A2535" stroke-width="1" opacity="0.5"/>
+      </svg>
+      <span class="nav-wordmark">LAUTERTUN <em>PARTNERS</em></span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#approach">Approach</a></li>
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="breweries.html" class="nav-active">Breweries</a></li>
+      <li><a href="#contact" class="nav-cta">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+</header>
+
+
+<!-- ── HERO ───────────────────────────────────────────────────────────────── -->
+<section class="hero hero-brewery">
+  <div class="hero-inner">
+    <div class="hero-eyebrow ltp-overline">Brewery Industry · SBA Debt Restructuring</div>
+    <h1 class="hero-headline">
+      The debt caught up.<br>
+      <em>There's a way out.</em>
+    </h1>
+    <p class="hero-sub">
+      We specialize in SBA debt restructuring for craft breweries navigating the collision of rising rates, contracting demand, and inflated debt loads. A clean exit is possible — and more affordable than you think.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary">Talk to Us Confidentially</a>
+      <a href="#industry" class="btn-ghost">Read the Industry Brief</a>
+    </div>
+  </div>
+  <div class="hero-mark" aria-hidden="true">
+    <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="32" cy="32" r="30" stroke="#B8934A" stroke-width="0.8" fill="none"/>
+      <circle cx="32" cy="32" r="24" stroke="#B8934A" stroke-width="0.4" fill="none" opacity="0.35"/>
+      <clipPath id="hc"><circle cx="32" cy="32" r="23"/></clipPath>
+      <g clip-path="url(#hc)">
+        <line x1="9" y1="46" x2="55" y2="46" stroke="#B8934A" stroke-width="1.1" opacity="0.5"/>
+        <line x1="9" y1="42" x2="55" y2="42" stroke="#B8934A" stroke-width="1.0" opacity="0.45"/>
+        <line x1="9" y1="38" x2="55" y2="38" stroke="#B8934A" stroke-width="0.9" opacity="0.4"/>
+        <line x1="9" y1="33" x2="55" y2="33" stroke="#B8934A" stroke-width="0.8" opacity="0.3"/>
+        <line x1="9" y1="28" x2="55" y2="28" stroke="#B8934A" stroke-width="0.7" opacity="0.25"/>
+        <line x1="9" y1="22" x2="55" y2="22" stroke="#B8934A" stroke-width="0.6" opacity="0.18"/>
+        <line x1="9" y1="17" x2="55" y2="17" stroke="#B8934A" stroke-width="0.5" opacity="0.12"/>
+      </g>
+      <line x1="32" y1="38" x2="32" y2="14" stroke="white" stroke-width="1.2" opacity="0.6"/>
+      <polyline points="26,20 32,13 38,20" stroke="white" stroke-width="1.2" fill="none" stroke-linejoin="round" opacity="0.6"/>
+      <line x1="24" y1="38" x2="40" y2="38" stroke="white" stroke-width="1.2" opacity="0.6"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ── CONTACT BANNER 1 ───────────────────────────────────────────────────── -->
+<div class="contact-banner">
+  <div class="container">
+    <h3>Is your brewery carrying SBA debt it can no longer service?</h3>
+    <p>A confidential conversation costs nothing. We'll tell you plainly what options exist.</p>
+    <a href="#contact" class="btn-white">Schedule a Confidential Call</a>
+    <a href="mailto:info@lautertunpartners.com" class="btn-ghost-dark">info@lautertunpartners.com</a>
+  </div>
+</div>
+
+
+<!-- ── INDUSTRY NARRATIVE / BLOG ─────────────────────────────────────────── -->
+<section class="article-section" id="industry">
+  <div class="article-wrap">
+
+    <span class="article-label ltp-overline">Industry Brief — Craft Brewing</span>
+    <h1 class="article-title">Last Call on Easy Money:<br>How the Craft Beer Boom Became a Balance Sheet Crisis — and What Breweries Can Do Now</h1>
+    <p class="article-byline">Lautertun Partners &nbsp;·&nbsp; March 2025</p>
+
+    <p class="article-lead">
+      For most of the 2010s, craft brewing was one of the great American small-business success stories. Then the money got expensive, demand softened, and the industry found itself holding the bill for a decade of optimism.
+    </p>
+
+    <div class="article-body">
+
+      <h3>A Decade of Double-Digit Growth</h3>
+      <p>
+        From 2012 through 2019, craft beer volume grew at double-digit rates annually, outpacing virtually every other segment of the beverage industry. The number of operating breweries in the United States grew from roughly 2,400 to nearly 8,000 in just seven years. The narrative was self-reinforcing: local tastes, premiumization, and an endlessly curious consumer base made expansion feel not just reasonable, but obligatory.
+      </p>
+      <p>
+        Founders who opened taprooms opened production facilities. Production facilities built out canning lines. Canning lines needed cold storage. Cold storage needed loading docks. Every step was an investment, and every investment felt justified by the trajectory of the market.
+      </p>
+
+      <h3>Debt-Financed on a Zero-Rate Foundation</h3>
+      <p>
+        Most of that expansion was financed with debt — and much of it with SBA loans. The SBA 7(a) and 504 programs were, and remain, the primary capital source for small brewery expansions. They offer favorable terms, longer maturities, and lower down payments than conventional commercial loans. For an owner-operator building out a 10,000-square-foot production facility in 2016 or 2018, an SBA note at a floating rate felt like a gift.
+      </p>
+      <p>
+        The key word is <em>floating</em>. The overwhelming majority of SBA 7(a) loans are variable-rate instruments tied to the prime rate. When interest rates sat at historic lows — the Fed funds rate was effectively zero from 2009 through 2015, and returned near zero from 2020 through 2022 — those floating rates were extraordinarily low. A brewery carrying $1.5 million in SBA debt at prime + 2.75% in 2021 was paying something in the range of 5.5%. By late 2023, that same loan was costing closer to 11%. Monthly debt service, in many cases, had nearly doubled.
+      </p>
+
+      <div class="article-pullquote">
+        <p>"The loan that made sense in 2020 at 5.5% is the same loan that's strangling operations at 11%. The business didn't change — the cost of capital did."</p>
+      </div>
+
+      <h3>Demand Contracted. Capacity Did Not.</h3>
+      <p>
+        Just as interest costs were climbing, the market softened. Post-pandemic consumer preferences shifted. Hard seltzer captured shelf space. Spirits and ready-to-drink cocktails pulled drinkers away from craft beer. Inflation compressed discretionary spending at exactly the income levels most likely to support taproom visits and $18 four-packs. Volume growth that had been near double digits went flat — and in many regions, turned negative.
+      </p>
+      <p>
+        The breweries that expanded most aggressively were left with capacity they couldn't fill. Packaging lines running at 40% utilization. Fermenters sitting cold. A taproom built for 400 covers serving 120 on a Saturday night. The fixed costs remained. The revenue did not.
+      </p>
+
+      <h3>Breakeven Moved. Materially.</h3>
+      <p>
+        At the same time, raw material costs rose sharply. Malt, hops, grain, packaging, and CO₂ all experienced significant price increases through 2022 and 2023. Labor costs rose. Delivery costs rose. Energy costs rose. For a business whose margins were already thin — a well-run craft brewery might net 8–12% before debt service — the compression in gross margin meant the breakeven point on that underutilized capacity climbed substantially. Breweries that needed to sell 4,000 barrels to cover costs now needed 5,500. And they were selling 3,200.
+      </p>
+
+      <!-- Inline CTA -->
+      <div class="article-cta-inline">
+        <p>
+          <strong>Sound familiar?</strong>
+          If you're a brewery owner managing rising debt service, shrinking margins, and underperforming capacity — we can help you understand your options. The conversation is confidential and there's no obligation.
+        </p>
+        <a href="#contact" class="btn-gold">Talk to Us</a>
+      </div>
+
+      <h3>Asset Values Collapsed. That's Actually Good News.</h3>
+      <p>
+        The knock-on effect of all of the above has been a significant contraction in the market value of brewery assets. Fermenters, canning lines, taproom buildouts, and leasehold improvements that once commanded premium prices are now trading at steep discounts. Secondary market prices for brewing equipment have dropped significantly. Lenders who made SBA loans collateralized against brewery infrastructure have discovered that the collateral is worth far less than they anticipated at origination.
+      </p>
+      <p>
+        For struggling brewery owners, this might seem like another piece of bad news. It is not. It is, in fact, the opening for a negotiated resolution.
+      </p>
+
+      <h3>The SBA Debt Restructuring Opportunity</h3>
+      <p>
+        SBA lenders — and the SBA itself — have clear frameworks for addressing loans where the underlying business and collateral can no longer support full repayment. When the market value of a borrower's assets has declined materially relative to the outstanding loan balance, lenders have strong incentives to negotiate rather than litigate. Foreclosure on a canning line no one wants is not an appealing outcome for anyone.
+      </p>
+      <p>
+        The SBA Offer in Compromise (OIC) process, when navigated correctly, allows a borrower to settle an SBA loan for a lump sum that reflects the actual recovery value of the collateral — not the original loan balance. In the current environment, with beer infrastructure assets depressed, this means many brewery owners can close the book on SBA debt for a fraction of what they borrowed. The result is a clean exit: the business or its assets transfer, the personal guarantee exposure resolves, and the owner moves on without a deficiency judgment hanging over them for years.
+      </p>
+
+      <div class="article-pullquote">
+        <p>"Lenders understand the market. They know what a brite tank is worth right now. That shared understanding of reality is exactly what makes a negotiated resolution possible."</p>
+      </div>
+
+      <p>
+        This process requires expertise. The SBA OIC framework is specific, the documentation requirements are exacting, and the negotiation involves both the lender and SBA central office. Done incorrectly, borrowers can inadvertently waive protections, miss filing windows, or accept terms that leave them worse off than a structured liquidation would have. Done correctly, it is one of the most efficient paths out of financial distress available to any small business owner.
+      </p>
+
+      <h3>We Are Specialists in This Process</h3>
+      <p>
+        Lautertun Partners works with brewery owners at exactly this inflection point. We understand the SBA loan structure, the lender negotiation dynamics, and the asset valuation realities of the current brewing market. We have guided business owners through the Offer in Compromise process, the formal SBA workout procedures, and the broader restructuring of brewing operations — from triage through resolution.
+      </p>
+      <p>
+        If you are a brewery owner carrying SBA debt that your business can no longer service, the first step is a candid conversation about your situation. No obligation, no judgment — just a clear-eyed assessment of what your options are and what a realistic path forward looks like.
+      </p>
+      <p>
+        The window to act on favorable terms does not stay open indefinitely. As lenders work through their distressed portfolios and default rates rise, negotiating leverage shifts. The time to engage is now, before the lender controls the process rather than you.
+      </p>
+
+    </div><!-- /.article-body -->
+  </div><!-- /.article-wrap -->
+</section>
+
+
+<!-- ── CAPABILITIES ───────────────────────────────────────────────────────── -->
+<section class="section capabilities" id="services">
+  <div class="container">
+    <div class="section-header">
+      <span class="ltp-overline">How We Help Breweries</span>
+      <h2>Specialists in<br>Brewery Distress.</h2>
+    </div>
+    <div class="capabilities-grid">
+
+      <div class="cap-card">
+        <span class="ltp-overline">SBA Workout</span>
+        <h3>SBA Debt Restructuring &amp; Offer in Compromise</h3>
+        <p>We manage the full SBA OIC process — from financial package preparation to lender and SBA negotiation — to reach a settlement that reflects actual asset values, not your original loan balance.</p>
+        <ul class="cap-list">
+          <li>SBA Offer in Compromise preparation</li>
+          <li>Collateral valuation analysis</li>
+          <li>Lender negotiation strategy</li>
+          <li>Personal guarantee resolution</li>
+          <li>SBA central office coordination</li>
+        </ul>
+      </div>
+
+      <div class="cap-card">
+        <span class="ltp-overline">Balance Sheet</span>
+        <h3>Creditor Negotiation &amp; Debt Restructuring</h3>
+        <p>Beyond the SBA note, many breweries carry equipment loans, landlord obligations, and trade payables. We address the full liability stack — not just the piece the SBA controls.</p>
+        <ul class="cap-list">
+          <li>Multi-creditor negotiation</li>
+          <li>Lease modification &amp; termination</li>
+          <li>Equipment lender workouts</li>
+          <li>Trade payable resolution</li>
+          <li>Forbearance agreement structuring</li>
+        </ul>
+      </div>
+
+      <div class="cap-card">
+        <span class="ltp-overline">Operations</span>
+        <h3>Operational Stabilization &amp; Turnaround</h3>
+        <p>For breweries that have a viable core business buried under an unsustainable capital structure, we provide the operational and financial leadership to stabilize and right-size the operation.</p>
+        <ul class="cap-list">
+          <li>Cash flow triage</li>
+          <li>Cost structure analysis</li>
+          <li>Capacity rationalization</li>
+          <li>Interim financial management</li>
+          <li>Vendor &amp; supply chain stabilization</li>
+        </ul>
+      </div>
+
+      <div class="cap-card">
+        <span class="ltp-overline">Exit Advisory</span>
+        <h3>Clean Exit &amp; Asset Disposition</h3>
+        <p>When the right outcome is a sale of the business or its assets, we manage the process — maximizing recovery, sequencing creditor resolution correctly, and ensuring you exit cleanly.</p>
+        <ul class="cap-list">
+          <li>Business &amp; asset sale advisory</li>
+          <li>Buyer identification &amp; negotiation</li>
+          <li>Asset disposition strategy</li>
+          <li>Lien resolution &amp; title clearing</li>
+          <li>Transaction closing coordination</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ── CONTACT BANNER 2 ───────────────────────────────────────────────────── -->
+<div class="contact-banner">
+  <div class="container">
+    <h3>Ready to understand your options?</h3>
+    <p>Every conversation is confidential. We work with brewery owners at all stages — from early distress to active lender pressure.</p>
+    <a href="#contact" class="btn-white">Start a Confidential Conversation</a>
+  </div>
+</div>
+
+
+<!-- ── CONTACT ────────────────────────────────────────────────────────────── -->
+<section class="section contact" id="contact">
+  <div class="container contact-inner">
+    <div class="contact-content">
+      <span class="ltp-overline">Get in Touch</span>
+      <h2>Let's Talk About<br>Your Situation.</h2>
+      <p>Every brewery situation is different. The first conversation is about understanding yours — the debt structure, the lender relationship, the operational picture — so we can give you an honest assessment of what's possible.</p>
+      <p style="font-size: var(--text-base); color: var(--color-steel); line-height: var(--leading-normal); margin-bottom: var(--space-8);">There is no obligation and no judgment. Most clients come to us having not talked to anyone about their situation. That's exactly where we start.</p>
+      <div class="contact-details">
+        <div class="contact-item">
+          <span class="contact-label ltp-overline">Email</span>
+          <a href="mailto:info@lautertunpartners.com">info@lautertunpartners.com</a>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" action="#" method="post">
+      <div class="form-field">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name">
+      </div>
+      <div class="form-field">
+        <label for="brewery">Brewery Name</label>
+        <input type="text" id="brewery" name="brewery" placeholder="Your brewery">
+      </div>
+      <div class="form-field">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email">
+      </div>
+      <div class="form-field">
+        <label for="debt">Approximate SBA Loan Balance</label>
+        <input type="text" id="debt" name="debt" placeholder="e.g. $800K, $1.5M — rough estimate is fine">
+      </div>
+      <div class="form-field">
+        <label for="message">Tell us about your situation</label>
+        <textarea id="message" name="message" rows="4" placeholder="A brief description — where you are with the lender, what's been most challenging..."></textarea>
+      </div>
+      <button type="submit" class="btn-primary btn-full">Send Message</button>
+      <p style="font-size: var(--text-xs); color: var(--color-steel); text-align: center; margin-top: var(--space-4); opacity: 0.65; letter-spacing: var(--tracking-wide);">All inquiries are strictly confidential.</p>
+    </form>
+  </div>
+</section>
+
+
+<!-- ── FOOTER ─────────────────────────────────────────────────────────────── -->
+<footer class="footer">
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <span class="footer-wordmark ltp-wordmark">LAUTERTUN <span>PARTNERS</span></span>
+      <p class="ltp-tagline" style="margin-top:8px">Restructuring · Advisory · Financial Leadership &amp; Management</p>
+    </div>
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#approach">Approach</a>
+      <a href="index.html#about">About</a>
+      <a href="breweries.html">Breweries</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <p class="footer-legal">&copy; 2025 Lautertun Partners. All rights reserved.</p>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  toggle.addEventListener('click', () => {
+    const open = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!open));
+    navLinks.classList.toggle('is-open');
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) {
+        e.preventDefault();
+        navLinks.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
+  const nav = document.querySelector('.nav-wrap');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('is-scrolled', window.scrollY > 20);
+  }, { passive: true });
+</script>
+
+</body>
+</html>
