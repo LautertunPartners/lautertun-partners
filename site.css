@@ -306,7 +306,7 @@ body {
   top: 50%;
   transform: translateY(-50%);
   width: clamp(200px, 30vw, 360px);
-  opacity: 0.12;
+  opacity: 0.3;
   pointer-events: none;
 }
 
